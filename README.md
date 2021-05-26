@@ -1,6 +1,4 @@
 # testing-workshop-cypress
-![cypress version](https://img.shields.io/badge/cypress-6.5.0-brightgreen) [![CircleCI][ci-badge]][ci-url] [![Build status](https://ci.appveyor.com/api/projects/status/lflec2iwjc8gbhki/branch/master?svg=true)](https://ci.appveyor.com/project/cypress-io/testing-workshop-cypress/branch/master) [![renovate-app badge][renovate-badge]][renovate-app]
-
 > A full day testing workshop complete with application, exercise tests and speaker slides for [Cypress.io](https://www.cypress.io/)
 
 ## Requirements
@@ -8,16 +6,17 @@
 - Any computer: Mac, Windows, Linux
 - [Node 12.0.0+ (LTS)](https://nodejs.org/), check [GH workflow file](.github/workflows/min-node-version.yml)
 - [git](https://git-scm.com)
+- An IDE like [IntelliJ](https://www.jetbrains.com/idea/download/#section=windows)
 
 In order to get the code and install dependencies
 
 ```bash
-git clone git@github.com:cypress-io/testing-workshop-cypress.git
+git clone https://github.com/mahasty-assi/testing-workshop-cypress
 cd testing-workshop-cypress
 npm install
 ```
 
-If necessary, install dependencies inside TodoMVC folder
+If necessary, install dependencies inside TodoMVC folder (not always necessary)
 
 ```bash
 cd todomvc
@@ -118,31 +117,6 @@ See the presentation at [https://testing-workshop-cypress.netlify.app/][presenta
 | [🔗](#code-coverage) | Code coverage | [19-code-coverage](cypress/integration/19-code-coverage) | [19-code-coverage](slides/19-code-coverage/PITCHME.md) | [link](https://testing-workshop-cypress.netlify.app?p=19-code-coverage)
 | [🔗](#stubbing-methods) | Stubbing methods | [20-stubbing](./cypress/integration/20-stubbing) | [20-stubbing](./slides/20-stubbing/PITCHME.md) | [link](https://testing-workshop-cypress.netlify.app?p=20-stubbing)
 | | The end                                | -                                                                                        | [end](slides/end/PITCHME.md)                                       | [link](https://testing-workshop-cypress.netlify.app?p=end)
-
-## For speakers 🎙
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/de48e52e-e2ee-4092-a626-ab4fa358e441/deploy-status)](https://app.netlify.com/sites/testing-workshop-cypress/deploys)
-
-This workshop can take all day, but you can pick the sections you are interested in teaching at will and customize it into any time duration. Everyone is coding for the most part, except for CI and the Cypress Dashboard sections, where the usage was shown via slides and actual sites.
-
-During the workshop, keep the `todomvc` app running in one shell, while each section `01-basic`, `02-...`, `03-...` etc. has its own Cypress and specs subfolders `cypress/integration/...`. Usually a spec has several tests with placeholder comments. The workshop attendees are expected to make the tests pass using the knowledge from the slides and hints (and [Cypress documentation](https://docs.cypress.io/)). Note that most folders have a prepared `spec.js` file and an `answer.js` file. The `answer.js` file is ignored by Cypress using a setting in `cypress.json`.
-
-The only exception is the folder `00-start`. This is a folder for students to see how Cypress scaffolds example specs when you open Cypress for the very first time. In this folder students should execute...
-
-```
-cd 00-start
-npm run cy:open
-```
-
-...and see the list of created example specs.
-
-The slides are generated using Reveal.js from Markdown sources in the [slides](slides) folder. You can show the slides locally by running
-
-```shell
-npm run slides:dev
-```
-
-The slides are deployed to Netlify automatically, see [https://testing-workshop-cypress.netlify.app/](https://testing-workshop-cypress.netlify.app/)
 
 ## Additional information 🗃
 
